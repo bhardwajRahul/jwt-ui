@@ -68,11 +68,11 @@ pub enum Key {
 impl Key {
   /// Returns the function key corresponding to the given number
   ///
-  /// 1 -> F1, etc...
+  /// 0 -> F0, 1 -> F1, etc...
   ///
   /// # Panics
   ///
-  /// If `n == 0 || n > 12`
+  /// If `n > 12`
   pub fn from_f(n: u8) -> Key {
     match n {
       0 => Key::F0,
